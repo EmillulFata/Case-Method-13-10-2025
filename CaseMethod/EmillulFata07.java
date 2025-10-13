@@ -49,24 +49,23 @@ public class EmillulFata07 {
       } else {
         StatusSemester = "TIDAK LULUS (Salah Mata Kuliah Tidak Lulus)";
       }
-    
-    
+
     System.out.println("\n\n==================== HASIL PENILAIAN AKADEMIK ====================");
     System.out.println("Nama            : Emillul Fata Rachman");
     System.out.println("NIM             : 254107060105");
     System.out.println("Absen dan Kelas : 07 , SIB 1F");
-    System.out.println();
-    System.out.println("\nMATA KULIAH\t\tTUGAS\tUTS\tUAS\tNilai Akhir\tNilai Huruf\t STATUS");
+    System.out.println("\n\nMATA KULIAH\t\tTUGAS\tUTS\tUAS\tNilai Akhir\tNilai Huruf\t STATUS");
     System.out.println("---------------------------------------------------------------------------------------");
     System.out.printf("Algoritma Pemrograman\t%.0f\t%.0f\t%.0f\t%.2f\t\t%s\t%14s\n",
                   tugas_1, uts_1, uas_1, Nilai_Akhir_1, NilaiHuruf1, Status1);
-System.out.printf("Struktur Data\t\t%.0f\t%.0f\t%.0f\t%.2f\t\t%s\t%14s\n",
+    System.out.printf("Struktur Data\t\t%.0f\t%.0f\t%.0f\t%.2f\t\t%s\t%14s\n",
                   tugas_2, uts_2, uas_2, Nilai_Akhir_2, NilaiHuruf2, Status2);
     System.out.println("---------------------------------------------------------------------------------------");
 
     System.out.printf("\nRata-Rata Nilai Akhir : %.2f", Rerata);
     System.out.printf("\nStatus Semester       : %s" , StatusSemester);
   }
+
     public static String dapatHuruf(double nilai) {
       if (nilai >= 80 && nilai <= 100) return "A";
         else if (nilai > 73 && nilai <= 80) return "B+";
