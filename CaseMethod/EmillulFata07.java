@@ -38,7 +38,18 @@ public class EmillulFata07 {
     NilaiHuruf2 = dapatHuruf(Nilai_Akhir_2);
     Status1 = (Nilai_Akhir_1 >= 70) ? "LULUS" : "TIDAK LULUS";
     Status2 = (Nilai_Akhir_2 >= 70) ? "LULUS" : "TIDAK LULUS";
-    StatusSemester = (Rerata >= 70) ? "LULUS" : "TIDAK LULUS";
+
+    //NESTED IF//
+    if (Status1.equals("LULUS") && Status2.equals("LULUS")) {
+      if (Rerata >= 70) {
+        StatusSemester = "LULUS (Rerata >= 70)";
+      } else {
+        StatusSemester = "TIDAK LULUS (Rerata < 70)"; 
+      }
+      } else {
+        StatusSemester = "TIDAK LULUS (Salah Mata Kuliah Tidak Lulus)";
+      }
+    
     
     System.out.println("\n\n==================== HASIL PENILAIAN AKADEMIK ====================");
     System.out.println("Nama            : Emillul Fata Rachman");
@@ -53,7 +64,7 @@ System.out.printf("Struktur Data\t\t%.0f\t%.0f\t%.0f\t%.2f\t\t%s\t%14s\n",
                   tugas_2, uts_2, uas_2, Nilai_Akhir_2, NilaiHuruf2, Status2);
     System.out.println("---------------------------------------------------------------------------------------");
 
-    System.out.printf("\nRata-rata Nilai Akhir : %.2f", Rerata);
+    System.out.printf("\nRata-Rata Nilai Akhir : %.2f", Rerata);
     System.out.printf("\nStatus Semester       : %s" , StatusSemester);
   }
     public static String dapatHuruf(double nilai) {
