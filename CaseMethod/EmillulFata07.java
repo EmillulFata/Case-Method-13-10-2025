@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class EmillulFata07 {
   public static void main(String[] args) {
-    double tugas_1, uts_1, uas_1, Nilai_Tugas_1, Nilai_UTS_1, Nilai_UAS_1;
-    double tugas_2, uts_2, uas_2, Nilai_Tugas_2, Nilai_UTS_2, Nilai_UAS_2;
+    double tugas_1, uts_1, uas_1;
+    double tugas_2, uts_2, uas_2;
     double Nilai_Akhir_1, Nilai_Akhir_2, Rerata;
-    String NilaiHuruf1,NilaiHuruf2,Status1,Status2,StatusSemester,getHuruf; 
+    String NilaiHuruf1,NilaiHuruf2,Status1,Status2,StatusSemester; 
     Scanner mean = new Scanner(System.in);
 
     System.out.println("===== INPUT DATA MAHASISWA =====");
@@ -14,14 +14,14 @@ public class EmillulFata07 {
     System.out.println("NIM              : 254107060105");
     System.out.println("Absen dan Kelas  : 07 , SIB 1F");
 
-    System.out.println("\n------- MATA KULIAH 1 : ALGORITMA DAN PEMROGRAMAN -------");
+    System.out.println("\n------- MATA KULIAH 1 : Algoritma Dan Pemrograman -------");
     System.out.print("Input Nilai Tugas : ");
     tugas_1 = mean.nextDouble();
     System.out.print("Input Nilai UTS   : ");
     uts_1 = mean.nextDouble();
     System.out.print("Input Nilai UAS   : ");
     uas_1= mean.nextDouble();
-
+    
     System.out.println("\n------- MATA KULIAH 2 : STRUKTUR DATA -------");
     System.out.print("Input Nilai Tugas : ");
     tugas_2= mean.nextDouble();
@@ -29,7 +29,7 @@ public class EmillulFata07 {
     uts_2= mean.nextDouble();
     System.out.print("Input Nilai UAS   : ");
     uas_2= mean.nextDouble();
-
+    
     Nilai_Akhir_1 = (tugas_1* 0.3) + (uts_1* 0.3) + (uas_1* 0.4);
     Nilai_Akhir_2 = (tugas_2* 0.3) + (uts_2* 0.3) + (uas_2* 0.4);
     Rerata = (Nilai_Akhir_1 + Nilai_Akhir_2) / 2;
@@ -40,16 +40,16 @@ public class EmillulFata07 {
     Status2 = (Nilai_Akhir_2 >= 70) ? "LULUS" : "TIDAK LULUS";
 
     //NESTED IF//
-    if (Status1.equals("LULUS") && Status2.equals("LULUS")) {
-      if (Rerata >= 70) {
-        StatusSemester = "LULUS (Rerata >= 70)";
-      } else {
-        StatusSemester = "TIDAK LULUS (Rerata < 70)"; 
-      }
-      } else {
-        StatusSemester = "TIDAK LULUS (Salah Mata Kuliah Tidak Lulus)";
-      }
-
+   if (Status1.equals("LULUS") && Status2.equals("LULUS")) { 
+        if (Rerata >= 70) {
+          StatusSemester = "LULUS (Rerata >= 70)";
+        } else {
+          StatusSemester = "TIDAK LULUS (Rerata < 70)";
+        }
+    } else {
+      StatusSemester = "TIDAK LULUS (Ada Mata Kuliah Tidak Lulus)";
+    }
+    
     System.out.println("\n\n==================== HASIL PENILAIAN AKADEMIK ====================");
     System.out.println("Nama            : Emillul Fata Rachman");
     System.out.println("NIM             : 254107060105");
